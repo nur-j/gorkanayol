@@ -79,7 +79,7 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="/">{{ __('main.home') }}</a></li>
-                                    <li><a href="{{ route('order.form') }}">Сделать заказ</a></li>
+                                    <li><a href="{{ route('order.form') }}">{{ __('main.order') }}</a></li>
                                     {{-- <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">Home</a></li>

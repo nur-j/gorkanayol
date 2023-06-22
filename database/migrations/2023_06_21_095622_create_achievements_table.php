@@ -15,10 +15,10 @@ class CreateAchievementsTable extends Migration
     {
         Schema::create('achievements', function (Blueprint $table) {
             $table->id();
-            $table->integer('clients');
-            $table->integer('km');
-            $table->integer('shipped');
-            $table->integer('staff');
+            $table->integer('clients')->default(0);
+            $table->integer('km')->default(0);
+            $table->integer('shipped')->default(0);
+            $table->integer('staff')->default(0);
             $table->timestamps();
         });
     }

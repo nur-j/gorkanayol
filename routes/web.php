@@ -40,8 +40,8 @@ Route::group(['prefix' => 'adminka', 'middleware' => 'admin'], function() {
     Route::get('/order-single/{id}', [OrderController::class, 'show'])->name('order.single');
     Route::resource('/posts', PostController::class);
     Route::resource('/slides', SlideController::class);
-
-    
+    Route::get('/achievements', [PageController::class, 'achievements'])->name('achievements');
+    Route::post('/achievements-post', [PageController::class, 'achievementsUpdate'])->name('achievements.update');
 });
 
 Route::get('adminka/login', [AdminController::class, 'login'])->name('admin.login');

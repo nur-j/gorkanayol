@@ -86,6 +86,7 @@
               </li>
             </ul>
           </li>
+          <!-- Orders section -->
           <li class="nav-item">
             <a href="{{ route('admin.orders') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
@@ -111,7 +112,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('achievements') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Наши достижения</p>
                 </a>
@@ -123,6 +124,15 @@
                 </a>
               </li>
             </ul>
+          </li>
+          <!-- Translations section -->
+          <li class="nav-item">
+            <a href="/translations" class="nav-link">
+              <i class="nav-icon fas fa-language"></i>
+              <p>
+                Переводы
+              </p>
+            </a>
           </li>
         </ul>
       </nav>

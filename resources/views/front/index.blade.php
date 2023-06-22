@@ -124,7 +124,7 @@
     
                         <!-- Load More -->
                         <div class="load-more-btn mt-3 wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="1000ms">
-                            <a href="{{ route('posts.index.front') }}" class="btn original-btn">Hemmesini görkez ...</a>
+                            <a href="{{ route('posts.index.front') }}" class="btn original-btn">{{ __('main.show_all') }} ...</a>
                         </div>
                     </div>
     
@@ -150,7 +150,7 @@
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" style="height:200px; object-fit: cover;" src="{{ asset('front/img/types/multimodal.jpg') }}" alt="Card image cap">
                             <div class="card-body">
-                              <p class="card-text"><strong>Мультимодальные перевозки</strong></p>
+                              <p class="card-text"><strong>{{ __('main.multimodal') }}</strong></p>
                             </div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" style="height:200px; object-fit: cover;" src="{{ asset('front/img/types/truck.jpg') }}" alt="Card image cap">
                             <div class="card-body">
-                              <p class="card-text"><strong>Автотранспортные перевозки</strong></p>
+                              <p class="card-text"><strong>{{ __('main.auto_transport') }}</strong></p>
                             </div>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" style="height:200px; object-fit: cover;" src="{{ asset('front/img/types/airplane.jpg') }}" alt="Card image cap">
                             <div class="card-body">
-                              <p class="card-text"><strong>Воздушные перевозки</strong></p>
+                              <p class="card-text"><strong>{{ __('main.airway') }}</strong></p>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" style="height:200px; object-fit: cover;" src="{{ asset('front/img/types/railway.jpg') }}" alt="Card image cap">
                             <div class="card-body">
-                              <p class="card-text"><strong>Железнодорожные перевозки</strong></p>
+                              <p class="card-text"><strong>{{ __('main.railway') }}</strong></p>
                             </div>
                         </div>
                     </div>
@@ -205,28 +205,28 @@
                     <!-- Single Cool Facts Area -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-cool-facts-area text-center mb-100">
-                            <h2><span class="counter">500</span></h2>
+                            <h2><span class="counter">{{ $a->clients }}</span></h2>
                             <p>довольных клиентов</p>
                         </div>
                     </div>
                     <!-- Single Cool Facts Area -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-cool-facts-area text-center mb-100">
-                            <h2><span class="counter">15000</span></h2>
+                            <h2><span class="counter">{{ $a->km }}</span></h2>
                             <p>километров</p>
                         </div>
                     </div>
                     <!-- Single Cool Facts Area -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-cool-facts-area text-center mb-100">
-                            <h2><span class="counter">62300</span></h2>
+                            <h2><span class="counter">{{ $a->shipped }}</span></h2>
                             <p>перевезено тонн</p>
                         </div>
                     </div>
                     <!-- Single Cool Facts Area -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-cool-facts-area text-center mb-100">
-                            <h2><span class="counter">37</span></h2>
+                            <h2><span class="counter">{{ $a->staff }}</span></h2>
                             <p>сотрудников</p>
                         </div>
                     </div>
