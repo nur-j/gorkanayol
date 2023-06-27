@@ -43,6 +43,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title_tm' => 'required',
+            'text_tm' => 'required',
+            'title_ru' => 'required',
+            'text_ru' => 'required',
+            'title_en' => 'required',
+            'text_en' => 'required',
+            'title_tr' => 'required',
+            'text_tr' => 'required',
+            'poster' => 'required'
+        ]);
+        
         $post = new Post;
         $post->title_tm = $request->title_tm;
         $post->text_tm = $request->text_tm;
@@ -50,8 +62,8 @@ class PostController extends Controller
         $post->text_ru = $request->text_ru;
         $post->title_en = $request->title_en;
         $post->text_en = $request->text_en;
-        $post->title_tr = 'turkce';
-        $post->text_tr = 'turkce';
+        $post->title_tr = $request->title_tr;
+        $post->text_tr = $request->text_tr;
         $post->category_id = $request->category_id;
         $post->created_at = $request->created_at;
 

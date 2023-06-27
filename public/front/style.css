@@ -1043,7 +1043,7 @@ textarea:focus ~ label,
 input:valid ~ label,
 textarea:valid ~ label {
   top: -15px;
-  font-size: 12px;
+  font-size: 14px;
   color: #30336b; }
 
 input:focus ~ .bar:before,
@@ -1465,3 +1465,4 @@ img.dropdown-img {
   top: 0;
   left: 0;
 }
+

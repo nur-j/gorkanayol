@@ -24,6 +24,19 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'fullname' => 'required|string',
+            'phone' => 'required',
+            'email' => 'required|email',
+            'type' => 'required',
+            'from' => 'required',
+            'destination' => 'required',
+            'width' => 'required|numeric',
+            'height' => 'required|numeric',
+            'length' => 'required|numeric',
+            'weight' => 'required|numeric'
+        ]);
+
         $order = Order::create($request->all());
         // try {
             Mail::to('jumayev.nur@gmail.com')->send(new OrderMail($order));

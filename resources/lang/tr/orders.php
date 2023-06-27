@@ -1,0 +1,25 @@
+<?php
+
+return array (
+  'code' => 'TN VED code',
+  'confirm' => 'Onaylamak',
+  'dangerous' => 'Tehlikeli',
+  'details' => 'Kargo detayları',
+  'email' => 'Email',
+  'express' => 'hızlı teslimat',
+  'fill' => 'Formu doldurun',
+  'fragile' => 'kırılgan',
+  'from' => 'Gidiş Şehri',
+  'fullname' => 'Soyadınız ve adınız',
+  'height' => 'Yükseklik (m)',
+  'length' => 'Uzunluk (m)',
+  'phone' => 'Telefon',
+  'to' => 'Teslimat şehri',
+  'transportation_type' => 'Ulaşım türü',
+  'weight' => 'Ağırlık (kg)',
+  'width' => 'Genişlik (m)',
+  'road' => 'Karayolu taşımacılığı',
+  'railway' => 'Demiryolu taşımacılığı',
+  'airway' => 'Havayolu taşımacılığı',
+  'multimodal' => 'Multimodal taşımacılığı',
+);

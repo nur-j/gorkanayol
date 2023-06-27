@@ -12,12 +12,17 @@
 
 @section('content')
 
-  <h1>Täze habar goşmak</h1>
+  <h1>Добавить новый пост</h1>
+  @if ($errors->any())
+      <div class="alert alert-danger">
+         Запольните все поля
+      </div>
+  @endif
 
   {{-- FORMA CARD --}}
   <div class="card card-primary mx-3">
     <div class="card-header">
-      <h3 class="card-title">Täze habar</h3>
+      <h3 class="card-title">Новый пост</h3>
     </div>
     <!-- /.card-header -->
     <!-- form start -->
@@ -29,13 +34,16 @@
           <div class="card-header p-0 pt-1">
             <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Türkmençe</a>
+                <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">по туркменски</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Rusça</a>
+                <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">по русски</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">Iňlisçe</a>
+                <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">по английски</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tr-tab" data-toggle="pill" href="#turkish-tab" role="tab" aria-controls="turkish-tab" aria-selected="false">по турецки</a>
               </li>
             </ul>
           </div>
@@ -43,35 +51,46 @@
             <div class="tab-content" id="custom-tabs-one-tabContent">
               <div class="tab-pane fade active show" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
                 <div class="form-group">
-                  <label for="title_tm">Türkmençe Sözbaşysy</label>
-                  <input type="text" class="form-control" name="title_tm" id="title_tm" placeholder="Täzeligiň sözbaşysy">
+                  <label for="title_tm">Заголовок (туркменский)</label>
+                  <input type="text" class="form-control" name="title_tm" id="title_tm" placeholder="">
                 </div>
         
                 <div class="form-group">
-                  <label for="description_tm">Habaryň türkmençesi</label>
+                  <label for="description_tm">Текст (туркменский)</label>
                   <textarea name="text_tm" class="form-control summernote" id="text_tm"></textarea>
                 </div>
               </div>
               <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
                 <div class="form-group">
-                  <label for="title_ru">Rusça sözbaşy</label>
-                  <input type="text" class="form-control" name="title_ru" id="title_ru" placeholder="Täzeligiň sözbaşysy">
+                  <label for="title_ru">Заголовок (русский)</label>
+                  <input type="text" class="form-control" name="title_ru" id="title_ru" placeholder="">
                 </div>
         
                 <div class="form-group">
-                  <label for="description_ru">Habaryň rusçasy</label>
+                  <label for="description_ru">Текст (русский)</label>
                   <textarea name="text_ru" class="form-control summernote" id="text_ru"></textarea>
                 </div>
               </div>
               <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
                 <div class="form-group">
-                  <label for="title_en">Iňlisçe sözbaşysy</label>
-                  <input type="text" class="form-control" name="title_en" id="title_en" placeholder="Täzeligiň sözbaşysy">
+                  <label for="title_en">Заголовок (английский)</label>
+                  <input type="text" class="form-control" name="title_en" id="title_en" placeholder="">
                 </div>
         
                 <div class="form-group">
-                  <label for="description_en">Habaryň iňlisçesi</label>
+                  <label for="description_en">Текст (английский)</label>
                   <textarea name="text_en" class="form-control summernote" id="text_en"></textarea>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="turkish-tab" role="tabpanel" aria-labelledby="tr-tab">
+                <div class="form-group">
+                  <label for="title_tr">Заголовок (турецкий)</label>
+                  <input type="text" class="form-control" name="title_tr" id="title_tr" placeholder="">
+                </div>
+        
+                <div class="form-group">
+                  <label for="text_tr">Текст (турецкий)</label>
+                  <textarea name="text_tr" class="form-control summernote" id="text_tr"></textarea>
                 </div>
               </div>
             </div>
@@ -80,7 +99,7 @@
         </div>
 
         <div class="form-group">
-          <label>Kategoriýa</label>
+          <label>Выберите категорию</label>
           <select name="category_id" class="form-control">
             {{-- @foreach ($categories as $category)
             <option value="{{ $category->id }}">{{ $category->title_tm }}</option>
@@ -90,13 +109,13 @@
         </div>
 
         <div class="form-group">
-          <label>Senesi</label>
+          <label>Дата</label>
           <input type="date" name="created_at" value="{{ date('Y-m-d') }}">
         </div>
 
 
         <div class="form-group">
-          <label for="exampleInputEmail1" class="form-label">Habaryň suraty</label>
+          <label for="exampleInputEmail1" class="form-label">Картинка</label>
           <input id="input-id" type="file" name="poster" class="form-control" id="exampleInputEmail1">
           {{-- <label for="exampleInputFile">Habaryň suraty</label>
           <div class="input-group">
@@ -114,7 +133,7 @@
       <!-- /.card-body -->
 
       <div class="card-footer">
-        <button type="submit" class="btn btn-primary">Tassyklamak</button>
+        <button type="submit" class="btn btn-primary">Добавить</button>
       </div>
     </form>
   </div>
@@ -143,7 +162,7 @@
   <script>
     // initialize plugin with defaults
     $("#input-id").fileinput({
-      dropZoneTitle: 'Yuklemek ucin shu yere basyn',
+      dropZoneTitle: 'Нажмите сюда или перетащите файл',
       removeTitle: "{{ __('request.remove') }}"
     });
   
