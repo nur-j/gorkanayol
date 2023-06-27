@@ -31,8 +31,10 @@
                                     <div class="single-blog-content">
                                         <div class="line"></div>
                                         <a href="#" class="post-tag">Habarlar</a>
-                                        <h4><a href="{{ route('posts.show.front', $post->id) }}" class="post-headline">{{ $post->title_ru }}</a></h4>
-                                        <p>
+                                        <h4>
+                                            <a href="{{ route('posts.show.front', $post->id) }}" class="post-headline">{{ $post->title_ru }}</a>
+                                        </h4>
+                                        {{-- <p>
                                             @switch($locale)
                                                 @case('ru')
                                                     {!! substr($post->text_ru, 0, 30) !!}
@@ -49,7 +51,7 @@
                                                 @default
                                                     {!! substr($post->text_ru, 0, 30) !!}
                                             @endswitch
-                                                ...</p>
+                                        </p> --}}
                                         {{-- <div class="post-meta">
                                             <p>32 gezek okaldy</p>
                                         </div> --}}

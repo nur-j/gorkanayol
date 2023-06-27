@@ -59,7 +59,7 @@
                         @foreach($posts as $post) 
                             <!-- Single Blog Area  -->
                             <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1000ms">
-                                <div class="row align-items-center">
+                                <div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="single-blog-thumbnail">
                                             <img style="max-height: 200px; object-fit: cover" src="{{ asset('storage/' . $post->poster) }}" alt="">
@@ -89,11 +89,11 @@
                                                             {{ $post->title_tr }}
                                                             @break
                                                         @default
-                                                            
+                                                            {{ $post->title_ru }}
                                                     @endswitch
                                                 </a>
                                             </h4>
-                                            <p>
+                                            {{-- <p>
                                                 @switch($locale)
                                                     @case('ru')
                                                         {!! substr($post->text_ru, 0, 30) !!}
@@ -110,11 +110,7 @@
                                                     @default
                                                         {!! substr($post->text_ru, 0, 30) !!}
                                                 @endswitch
-                                                 ...
-                                            </p>
-                                            {{-- <div class="post-meta">
-                                                <p>32 gezek okaldy</p>
-                                            </div> --}}
+                                            </p> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -136,14 +132,10 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
         <!-- ##### Blog Wrapper End ##### -->
        
-
-         <!-- ##### Transport Types Start ##### -->
-         <div style="background: #eee" class="transport-types-area py-5 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1000ms">
+        <!-- ##### Transport Types Start ##### -->
+        <div style="background: #eee" class="transport-types-area py-5 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1000ms">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-md-4 mb-2">
