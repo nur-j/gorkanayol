@@ -114,9 +114,9 @@
                                             <li><a href="#">Catagory 1</a></li>
                                         </ul>
                                     </li> --}}
-                                    <li><a href="about-us.html">{{ __('main.about') }}</a></li>
-                                    <li><a href="about-us.html">{{ __('main.services') }}</a></li>
-                                    <li><a href="contact.html">{{ __('main.contact') }}</a></li>
+                                    <li><a href="#">{{ __('main.about') }}</a></li>
+                                    <li><a href="#">{{ __('main.services') }}</a></li>
+                                    <li><a href="#">{{ __('main.contact') }}</a></li>
                                 
                                     {{-- <li class="">
                                         <div class="flags">

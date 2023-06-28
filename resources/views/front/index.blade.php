@@ -228,9 +228,9 @@
         <!-- ##### Cool Facts Area End ##### -->
         <br>
         <!-- ##### Our partners Area Start ##### -->
-        <div class="our-partners-area">
+        {{-- <div class="our-partners-area">
             <h3 class="text-center">Наши партнеры</h3>
-        </div>
+        </div> --}}
         <!-- ##### Our partners Area End ##### -->
 
 @endsection

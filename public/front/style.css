@@ -1443,7 +1443,7 @@ textarea:focus ~ .highlight {
 }
 
 /* CUSTOM STYLES */
-.classy-nav-container.light {  
+.classy-nav-container.light, footer {  
   background: lightblue;
   box-shadow: inset 0px 0 40px rgb(115, 180, 206);
 }

@@ -38,11 +38,12 @@ class OrderController extends Controller
         ]);
 
         $order = Order::create($request->all());
-        // try {
-            Mail::to('jumayev.nur@gmail.com')->send(new OrderMail($order));
-        // } catch (\Throwable $th) {
-            // return redirect()->back()->with('success', 'Ваш заказ был принят. Оператор связывается с вами в ближайщее время');
-        // }
+        try {
+            Mail::to('gorkanayol19@mail.ru')->send(new OrderMail($order));
+            Mail::to('makstransport@gmail.com')->send(new OrderMail($order));
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('success', 'Ваш заказ был принят. Оператор связывается с вами в ближайщее время');
+        }
         return redirect()->back()->with('success', 'Ваш заказ был принят. Оператор связывается с вами в ближайщее время');
     }
 }

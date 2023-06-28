@@ -81,65 +81,7 @@
 
                 <!-- ##### Sidebar Area ##### -->
                 <div class="col-12 col-md-4 col-lg-3">
-                    <div class="post-sidebar-area">
-
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="text">Latest Posts</h5>
-
-                            <div class="widget-contentext">                               <!-- Single Blog Post -->
-                                
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/lp2.jpg" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="post-tag">Lifestyle</a>
-                                        <h4><a href="#" class="post-headline">A sunday in the park</a></h4>
-                                        <div class="post-meta">
-                                            <p><a href="#">12 March</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/lp3.jpg" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="post-tag">Lifestyle</a>
-                                        <h4><a href="#" class="post-headline">Party people in the house</a></h4>
-                                        <div class="post-meta">
-                                            <p><a href="#">12 March</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/lp4.jpg" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="post-tag">Lifestyle</a>
-                                        <h4><a href="#" class="post-headline">A sunday in the park</a></h4>
-                                        <div class="post-meta">
-                                            <p><a href="#">12 March</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    
                 </div>
             </div>
         </div>
